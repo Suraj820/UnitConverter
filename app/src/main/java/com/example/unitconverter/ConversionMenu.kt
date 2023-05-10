@@ -71,8 +71,7 @@ fun ConversionMenu(list: List<Conversion>,
             expanded = expanded,
             onDismissRequest = { expanded = false },
             modifier = modifier.width(with(LocalDensity.current) { textFieldSize.width.toDp() })
-        )
-        {
+        ) {
             list.forEach { conversion ->
                 DropdownMenuItem(text = { Text(conversion.description,fontSize = 24.sp, fontWeight = FontWeight.Bold)},
                     onClick = {

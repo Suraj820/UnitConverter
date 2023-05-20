@@ -1,4 +1,4 @@
-package com.example.unitconverter
+package com.example.unitconverter.data
 
 data class Conversion(
     val id : Int,

@@ -8,6 +8,10 @@ on:
 jobs:
   build:
     name: Build
+    permissions:
+      contents: write-all
+      packages: write-all
+      pull-requests: write-all
     runs-on: ubuntu-latest
     steps:
       - run: echo "The job was automatically triggered by a ${{ github.event_name }} event."
@@ -31,6 +35,10 @@ jobs:
 
   bundle:
     name: Generate APK
+    permissions:
+      contents: write-all
+      packages: write-all
+      pull-requests: write-all
     runs-on: ubuntu-latest
     needs: build
     steps:
@@ -53,6 +61,10 @@ jobs:
 
   release:
     name: Create GitHub Release
+    permissions:
+      contents: write-all
+      packages: write-all
+      pull-requests: write-all
     needs: bundle
     runs-on: ubuntu-latest
     steps:

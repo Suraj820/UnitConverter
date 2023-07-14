@@ -55,6 +55,12 @@ jobs:
     name: Create GitHub Release
     needs: bundle
     runs-on: ubuntu-latest
+    permissions:
+        id-token: write
+        contents: read
+        issues: write
+        pull-requests: write
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
